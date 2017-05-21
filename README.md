@@ -1,7 +1,7 @@
-# ${Wine Style}
+# Grenache
 
-the social network for wine enthusiasts.
+The social network for wine enthusiasts.
 
-${Quip about the wine style.}
+Perfect pairing with this wine would be a summer evening and takeout Greek
 
-[Pour yourself a glass](https://ruby-rose-${wine-style}.herokuapp.com/)
+[Pour yourself a glass](https://ruby-rose-grenache.herokuapp.com/)
