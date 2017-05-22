@@ -1,0 +1,12 @@
+{
+  "name": "Ruby and Rose Training App",
+  "description": "This app is for teaching people Ruby",
+  "env": {
+    "GOOGLE_CLIENT_ID": {
+      "description": "a client id for google oauth"
+    },
+    "GOOGLE_CLIENT_SECRET": {
+      "description": "the accompanying secret for the google client id for google oauth"
+    }
+  }
+}
