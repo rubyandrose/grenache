@@ -1,0 +1,15 @@
+.MainNav {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #ff1e96;
+  margin: 0;
+
+  &-item, &-link {
+    color: #f9f4f7;
+  }
+
+  &-item {
+    padding: 10px;
+  }
+}
