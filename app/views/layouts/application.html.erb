@@ -10,7 +10,7 @@
 <body>
 
 <% if signed_in? %>
-  <%= link_to "Sign out", destroy_user_session_path %>
+  <%= render 'shared/nav' %>
 <% end %>
 
 <%= yield %>
