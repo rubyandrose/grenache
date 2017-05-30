@@ -1,0 +1,14 @@
+<h1>
+  <%= @profile.full_name %>'s Profile!
+</h1>
+
+<div>
+  <%= image_tag @profile.picture_url %>
+</div>
+
+<%= simple_form_for @profile, url: my_profile_path do |f| %>
+<%= f.input :birthday %><br>
+<%= f.input :location %><br>
+<%= f.input :hobbies %><br>
+<%= f.submit "Update Profile" %>
+<% end %>
