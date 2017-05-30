@@ -1,0 +1,13 @@
+<h1>
+  <%= @profile.full_name %>'s Profile!
+</h1>
+
+<div>
+  <%= image_tag @profile.picture_url %>
+</div>
+
+<div>
+  Birthday: <%= @profile.birthday %><br>
+  Location: <%= @profile.location %><br>
+  Hobbies: <%= @profile.hobbies %>
+</div>
