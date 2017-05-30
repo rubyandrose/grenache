@@ -5,3 +5,9 @@
 <div>
   <%= image_tag current_user.picture_url %>
 </div>
+
+<ul>
+  <% @posts.each do |post| %>
+    <li><%= post.content %></li>
+  <% end %>
+</ul>
