@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   resources :profiles, only: :show
   resource :my_profile, only: [:edit, :update]
 
+  resources :posts
+
   root to: "hello#index"
 end
