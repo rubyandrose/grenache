@@ -1,6 +1,7 @@
 <div>
   <%= simple_form_for(@post, url: posts_path) do |f| %>
-    <%= f.input :content %>  
+    <%= f.input :content %>
+    <%= f.input :emotion, as: :select, collection: Post::EMOTIONS, prompt: 'How u doin?' %>
     <%= f.submit 'Splash' %>
   <% end %>
 </div>
