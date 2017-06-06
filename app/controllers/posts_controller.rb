@@ -10,7 +10,11 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(user: current_user, content: params[:post][:content], emotion: params[:post][:emotion])
-    @post.save
-    redirect_to '/'
+
+    if @post.save == true
+    	redirect_to '/'
+    else
+    	render 'new'
+    end
   end
 end
