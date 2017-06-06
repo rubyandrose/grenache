@@ -2,6 +2,8 @@ class Post < ApplicationRecord
   EMOTIONS=['Happy', 'Sad', 'Intoxicated', 'Frump-tastic']
 
   belongs_to :user
+  has_many :likes
+
   validates :emotion, inclusion: { in: EMOTIONS }, allow_nil: true
 
   validates :content , length: { minimum: 1,

@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   resources :profiles, only: [:show, :index ]
   resource :my_profile, only: [:edit, :update]
 
-  resources :posts
+  resources :posts do
+    resources :likes, only: [:create, :destroy]
+  end
 
   root to: "hello#index"
 end
