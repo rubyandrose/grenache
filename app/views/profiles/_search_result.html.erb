@@ -1,11 +1,5 @@
-<h1>
-  <%= profile.full_name %>'s Profile!
-</h1>
-
 <div>
-  <%= image_tag profile.picture_url %>
+  <%= image_tag profile.picture_url, size: 32 %>
+  <%= link_to profile.full_name, profile_path(profile.id) %>
 </div>
 
-<div>
-  <%= link_to "View profile", profile_path(profile.id) %>
-</div>
