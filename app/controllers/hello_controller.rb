@@ -1,5 +1,5 @@
 class HelloController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = current_user.friends_posts
   end
 end

@@ -19,4 +19,8 @@ class User < ApplicationRecord
   def picture_url
     read_attribute(:picture_url) || avatar.url
   end
+
+  def friends_posts
+    Post.all
+  end
 end
