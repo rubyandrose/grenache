@@ -15,6 +15,7 @@
             <td><%= post.content %></td>
             <td><%= post.emotion %></td>
             <td><%= post.created_at %></td>
+            <td><%= link_to 'View Post', post_path(post) %></td>
           </tr>
         <% end %>
       </tbody>
