@@ -12,28 +12,4 @@
   Hobbies: <%= @profile.hobbies %>
 </div>
 
-<div>
-  <% if @my_posts.any? %>
-    <table>
-      <thead>
-        <h4>Posts</h4>
-        <tr>
-          <th>content</th>
-          <th>emotion</th>
-          <th>published at</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @my_posts.each do |post| %>
-          <tr>
-            <td><%= post.content %></td>
-            <td><%= post.emotion %></td>
-            <td><%= post.created_at %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-  <% else %>
-    <h3>No posts to see here...yet</h3>
-  <% end %>
-</div>
+<%= render partial: 'shared/posts', locals: { posts: @my_posts } %>
