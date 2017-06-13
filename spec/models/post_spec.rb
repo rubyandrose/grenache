@@ -1,5 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe Post, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+RSpec.describe Post do
+  it 'requires the content to be >= 10 characters' do
+    post = Post.new
+    post.content = "short"
+    expect(post.valid?).to eq false
+    expect(post.errors.keys).to include(:content)
+  end
 end
