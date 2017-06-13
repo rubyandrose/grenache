@@ -3,4 +3,5 @@
   <h4>How I'm feeling?</h4>
   <p><%= @post.emotion %></p>
   <p class="Post-Content"><%= @post.content %></p>
+  <td><%= render "shared/like", post: @post %></td>
 </div>
