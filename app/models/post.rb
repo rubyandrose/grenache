@@ -12,4 +12,11 @@ class Post < ApplicationRecord
   validates :content , length: { maximum: 200,
   too_long: "oops, too much content" }
 
+  def liked_by?(current_user)
+    likes.where(user: current_user).exists?
+  end
+
+  def likes_count
+    @likes_count ||= likes.count
+  end
 end

@@ -1,0 +1,1 @@
+$('.Post-likes[data-post-id="<%= @target_post.id %>"]').replaceWith('<%= j render partial: 'shared/like', locals: { post: @target_post } %>');

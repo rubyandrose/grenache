@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resource :my_profile, only: [:edit, :update]
 
   resources :posts do
-    resources :likes, only: [:create, :destroy]
+    resource :like, only: [:create, :destroy]
   end
 
   root to: "hello#index"
