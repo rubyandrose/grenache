@@ -2,6 +2,17 @@ ENV["RAILS_ENV"] ||= 'test'
 require 'spec_helper'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
+require 'capybara/rails'
+require 'capybara/rspec'
+require 'capybara-screenshot/rspec'
+
+Capybara.register_driver :selenium do |app|
+  Capybara::Selenium::Driver.new(
+    app,
+    browser: :chrome
+  )
+end
+Capybara.default_driver = Capybara.javascript_driver = :selenium
 
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
