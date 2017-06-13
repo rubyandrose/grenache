@@ -38,3 +38,20 @@ a:hover {
     font-size: 20px;
     text-decoration: underline;
 }
+
+.picture-weather {
+  float: left;
+  display: flex;
+  justify-content: center;
+}
+
+.picture {
+  margin-left: 25px;
+}
+.weather {
+  margin-left: 25px;
+}
+.personal-info {
+  clear: both;
+  margin-left: 25px;
+}
