@@ -1,9 +1,14 @@
 <ul class="MainNav">
   <li class="MainNav-item">
-  	<%= link_to 'Home', root_path %>
+  	<%= link_to 'Home', root_path, class: "MainNav-link" %>
+  </li>
+   <li class="MainNav-item">
+   	<%= link_to "All profiles", profiles_path, class: "MainNav-link"%>
+   </li>
+   <li class="MainNav-item">	
     <%= link_to "Sign out", destroy_user_session_path, class: "MainNav-link" %>
+   </li>
     <div class='logo-container'>
       <%= image_tag('grenache-logo.jpg') %>
     </div>
-  </li>
 </ul>
