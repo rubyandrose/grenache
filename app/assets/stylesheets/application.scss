@@ -8,6 +8,10 @@ body {
   margin: 0;
 }
 
+a:hover {
+	color: #f23e74;
+}
+
 .logo-container {
   display: block;
   text-align: right;
@@ -16,4 +20,21 @@ body {
   img {
     height: 100%;
   }
+}
+
+.PostTable {
+    margin-left:auto; 
+    margin-right:auto;
+
+    td {
+    	padding-right: 50px;
+    	padding-left: 50px;
+    	text-align: left;
+    }
+}
+
+.PostHeading {
+	 text-align: center;
+    font-size: 20px;
+    text-decoration: underline;
 }
