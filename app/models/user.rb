@@ -1,3 +1,5 @@
+require 'zodiac'
+
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -23,5 +25,9 @@ class User < ApplicationRecord
 
   def friends_posts
     Post.all
+  end
+
+  def zodiac
+    @zodiac_sign ||= birthday.zodiac_sign
   end
 end
