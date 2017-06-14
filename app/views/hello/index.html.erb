@@ -2,6 +2,13 @@
   Welcome, <%= current_user.full_name %>!
 </h1>
 
+<div class="UserSearch">
+    <%= simple_form_for(@user_search, url: profiles_path, method: :get) do |f| %>
+      <%= f.input :name %>
+      <%= f.submit 'Search' %>
+    <% end %>
+</div>
+
 <div>
   <%= image_tag current_user.picture_url %>
   <%= link_to "Edit profile", edit_my_profile_path %>

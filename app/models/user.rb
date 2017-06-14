@@ -3,6 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :trackable, :omniauthable, omniauth_providers: [:google_oauth2]
 
+  scope :full_name_contains, -> (full_name) { where("full_name like ?", "#{full_name}%")}
+
   has_many :posts
 
   has_attached_file :avatar, styles: { original: ["140x140#", :png] }
