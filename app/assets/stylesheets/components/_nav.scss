@@ -2,14 +2,18 @@
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  background-color: #ff1e96;
+  background-color: #f9b1b1;
   margin: 0;
 
   &-item, &-link {
-    color: #f9f4f7;
+    color: #261e1e;
   }
 
   &-item {
-    padding: 10px;
+    padding: 10px; 
+    display: flex;
+    align-items: flex-end;
+    margin-right: 20px;
   }
+
 }

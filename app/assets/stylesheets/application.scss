@@ -1,11 +1,15 @@
-@import url(//fonts.googleapis.com/css?family=Barrio);
+@import url(//fonts.googleapis.com/css?family=Poppins);
 
 @import "components/nav";
 @import "components/posts";
 
 body {
-  font-family: 'Barrio', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
+}
+
+a:hover {
+	color: #f23e74;
 }
 
 .logo-container {
@@ -16,4 +20,38 @@ body {
   img {
     height: 100%;
   }
+}
+
+.PostTable {
+    margin-left:auto; 
+    margin-right:auto;
+
+    td {
+    	padding-right: 50px;
+    	padding-left: 50px;
+    	text-align: left;
+    }
+}
+
+.PostHeading {
+	 text-align: center;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.picture-weather {
+  float: left;
+  display: flex;
+  justify-content: center;
+}
+
+.picture {
+  margin-left: 25px;
+}
+.weather {
+  margin-left: 25px;
+}
+.personal-info {
+  clear: both;
+  margin-left: 25px;
 }

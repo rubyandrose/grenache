@@ -1,8 +1,8 @@
 <div>
   <% if posts.any? %>
-    <table>
+    <table class="PostTable">
       <thead>
-        <h4>Posts</h4>
+        <h4 class="PostHeading">Posts</h4>
         <tr>
           <th>content</th>
           <th>emotion</th>
@@ -16,6 +16,7 @@
             <td><%= post.emotion %></td>
             <td><%= post.created_at %></td>
             <td><%= link_to 'View Post', post_path(post) %></td>
+            <td><%= render "shared/like", post: post %></td>
           </tr>
         <% end %>
       </tbody>

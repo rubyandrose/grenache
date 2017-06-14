@@ -6,10 +6,12 @@ Rails.application.routes.draw do
     get 'sign_out', to: 'devise/sessions#destroy', as: :destroy_user_session
   end
 
-  resources :profiles, only: [:show, :index ]
+  resources :profiles, only: [:show, :index]
   resource :my_profile, only: [:edit, :update]
 
-  resources :posts
+  resources :posts do
+    resource :like, only: [:create, :destroy]
+  end
 
   root to: "hello#index"
 end

@@ -2,12 +2,22 @@
   <%= @profile.full_name %>'s Profile!
 </h1>
 
-<div>
-  <%= image_tag @profile.picture_url %>
+<div class="picture-weather">
+  <div class="picture">
+    <%= image_tag @profile.picture_url %>
+  </div>
+
+  <div class="weather">
+    <%= image_tag @weather.image.url %>
+    <%= @weather.condition.temp %><br>
+    <%= @weather.condition.text %>
+  </div>
 </div>
 
-<div>
+<div class="personal-info">
   Birthday: <%= @profile.birthday %><br>
+  Zodiac: <%= @profile.zodiac %><br>
+  Horoscope: <%= @profile.weekly_horoscope %><br>
   Location: <%= @profile.location %><br>
   Hobbies: <%= @profile.hobbies %>
 </div>

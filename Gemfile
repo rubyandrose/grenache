@@ -14,7 +14,8 @@ gem 'omniauth-google-oauth2'
 gem 'paperclip'
 gem 'puma'
 gem 'simple_form'
-gem 'pry'
+gem 'zodiac'
+gem 'weather-api'
 
 group :development, :test do
   gem 'sqlite3'
@@ -22,6 +23,10 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails'
   gem 'dotenv-rails'
+  gem 'capybara'
+  gem 'capybara-screenshot'
+  gem 'selenium-webdriver'
+  gem 'pry'
 end
 
 group :production do
