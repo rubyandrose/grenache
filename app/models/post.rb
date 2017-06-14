@@ -11,7 +11,17 @@ class Post < ApplicationRecord
 
   validates :content , length: { maximum: 200,
   too_long: "oops, too much content" }
+  
+  BANNED_WORDS=['jabroni', 'charlatan', 'wealthfront', 'zinfandel']
 
+  def censored_content
+    sentence = content
+    BANNED_WORDS.each do | word |
+      sentence.gsub!(word, '*'*word.length)
+    end
+    sentence
+  end
+  
   def liked_by?(current_user)
     likes.where(user: current_user).exists?
   end

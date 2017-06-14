@@ -26,6 +26,7 @@ group :development, :test do
   gem 'capybara'
   gem 'capybara-screenshot'
   gem 'selenium-webdriver'
+  gem 'pry'
 end
 
 group :production do
