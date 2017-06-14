@@ -17,6 +17,6 @@ class ProfilesController < ApplicationController
   private
 
   def search_params
-    params.require(:user_search).permit(:name)
+    params.fetch(:user_search, {}).permit(:name)
   end
 end
