@@ -34,4 +34,8 @@ class User < ApplicationRecord
   def location
     self[:location] || "New York, NY"
   end
+
+  def weekly_horoscope
+    @weekly_horoscope ||= Horoscope.new(zodiac: zodiac.downcase).weekly_horoscope
+  end
 end
