@@ -5,7 +5,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :trackable, :omniauthable, omniauth_providers: [:google_oauth2]
 
-  scope :full_name_contains, -> (full_name) { where("full_name like ?", "#{full_name}%")}
+  scope :full_name_contains, -> (full_name) { where("lower(full_name) like ?", "#{full_name.downcase}%")}
 
   has_many :posts
   has_many :likes
