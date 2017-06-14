@@ -12,7 +12,7 @@
       <tbody>
         <% posts.each do |post| %>
           <tr>
-            <td><%= post.content %></td>
+            <td><%= post.censored_content %></td>
             <td><%= post.emotion %></td>
             <td><%= post.created_at %></td>
             <td><%= link_to 'View Post', post_path(post) %></td>

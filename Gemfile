@@ -14,6 +14,7 @@ gem 'omniauth-google-oauth2'
 gem 'paperclip'
 gem 'puma'
 gem 'simple_form'
+gem 'pry'
 
 group :development, :test do
   gem 'sqlite3'
