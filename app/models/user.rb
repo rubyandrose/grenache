@@ -30,4 +30,8 @@ class User < ApplicationRecord
   def zodiac
     @zodiac_sign ||= birthday.zodiac_sign
   end
+
+  def weekly_horoscope
+    @weekly_horoscope ||= Horoscope.new(zodiac: zodiac.downcase).weekly_horoscope
+  end
 end
