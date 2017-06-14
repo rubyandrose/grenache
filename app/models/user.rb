@@ -30,4 +30,8 @@ class User < ApplicationRecord
   def zodiac
     @zodiac_sign ||= birthday.zodiac_sign
   end
+
+  def location
+    self[:location] || "New York, NY"
+  end
 end

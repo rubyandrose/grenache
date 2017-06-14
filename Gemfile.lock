@@ -230,11 +230,11 @@ GEM
       execjs (>= 0.3.0, < 3)
     warden (1.2.7)
       rack (>= 1.0)
-    websocket (1.2.4)
     weather-api (1.4.0)
       chronic (~> 0.10.2)
       json
       map (~> 6.6.0)
+    websocket (1.2.4)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
