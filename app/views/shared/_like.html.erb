@@ -1,0 +1,7 @@
+<% if post.likes.empty? %>
+  <%= button_to "like", post_like_path(post), method: :post %>
+<% elsif post.liked_by?(current_user) %>
+  <%= link_to "#{pluralize(post.likes_count, 'like')}", post_like_path(post), method: :delete %>
+<% else %>
+  <%= link_to "#{pluralize(post.likes_count, 'like')}", post_like_path(post), method: :post %>
+<% end %>

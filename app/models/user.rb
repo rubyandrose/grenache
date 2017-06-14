@@ -1,3 +1,5 @@
+require 'zodiac'
+
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -6,6 +8,7 @@ class User < ApplicationRecord
   scope :full_name_contains, -> (full_name) { where("full_name like ?", "#{full_name}%")}
 
   has_many :posts
+  has_many :likes
 
   has_attached_file :avatar, styles: { original: ["140x140#", :png] }
   validates_attachment_content_type :avatar, :content_type => /\Aimage\//
@@ -24,5 +27,17 @@ class User < ApplicationRecord
 
   def friends_posts
     Post.all
+  end
+
+  def zodiac
+    @zodiac_sign ||= birthday.zodiac_sign
+  end
+
+  def location
+    self[:location] || "New York, NY"
+  end
+
+  def weekly_horoscope
+    @weekly_horoscope ||= Horoscope.new(zodiac: zodiac.downcase).weekly_horoscope
   end
 end

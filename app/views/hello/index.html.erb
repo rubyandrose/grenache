@@ -12,7 +12,6 @@
 <div>
   <%= image_tag current_user.picture_url %>
   <%= link_to "Edit profile", edit_my_profile_path %>
-  <%= link_to "All profiles", profiles_path %>
 </div>
 
 <%= render partial: 'shared/posts', locals: { posts: @posts } %>

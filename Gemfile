@@ -14,6 +14,8 @@ gem 'omniauth-google-oauth2'
 gem 'paperclip'
 gem 'puma'
 gem 'simple_form'
+gem 'zodiac'
+gem 'weather-api'
 
 group :development, :test do
   gem 'sqlite3'
