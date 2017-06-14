@@ -30,7 +30,7 @@ class User < ApplicationRecord
   end
 
   def zodiac
-    @zodiac_sign ||= birthday.zodiac_sign
+    @zodiac_sign ||= birthday.zodiac_sign if birthday.present?
   end
 
   def location
@@ -38,6 +38,6 @@ class User < ApplicationRecord
   end
 
   def weekly_horoscope
-    @weekly_horoscope ||= Horoscope.new(zodiac: zodiac.downcase).weekly_horoscope
+    @weekly_horoscope ||= Horoscope.new(zodiac: zodiac.downcase).weekly_horoscope if zodiac.present?
   end
 end
