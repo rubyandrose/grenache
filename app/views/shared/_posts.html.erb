@@ -4,8 +4,8 @@
       <thead>
         <h4 class="PostHeading">Posts</h4>
         <tr>
-          <th>content</th>
           <th>author</th>
+          <th>content</th>
           <th>emotion</th>
           <th>published at</th>
         </tr>
@@ -13,8 +13,8 @@
       <tbody>
         <% posts.each do |post| %>
           <tr>
-            <td><%= post.censored_content %></td>
             <td><%= post.user.full_name %></td>
+            <td><%= post.censored_content %></td>
             <td><%= post.emotion %></td>
             <td><%= post.created_at %></td>
             <td><%= link_to 'View Post', post_path(post) %></td>
