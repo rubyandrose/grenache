@@ -3,9 +3,6 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :trackable, :omniauthable, omniauth_providers: [:google_oauth2]
 
-  has_attached_file :avatar, styles: { original: ["140x140#", :png] }
-  validates_attachment_content_type :avatar, :content_type => /\Aimage\//
-
   def self.from_omniauth(auth)
     find_or_create_by(email: auth.info.email).tap do |user|
       user.full_name = auth.info.name
