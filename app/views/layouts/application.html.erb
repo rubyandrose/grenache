@@ -9,11 +9,16 @@
 </head>
 <body>
 
+<img src="/assets/new_logo.jpg" alt="Our Logo!" width="80" height="80">
+
 <% if signed_in? %>
-  <%= link_to "Sign out", destroy_user_session_path %>
+  <%= link_to "Sign out", destroy_user_session_path, class: "sign_out" %>
 <% end %>
 
+
+
 <%= yield %>
+More test texts
 
 </body>
 </html>
