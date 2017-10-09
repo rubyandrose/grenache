@@ -20,6 +20,8 @@ Setup a local database to store data for the web application
 rake db:setup
 ```
 
+Copy the google credential secrets pinned in the #ruby-and-rose slack channel and save them in a file called `.env.local`
+
 Start a local Rails server
 
 ```
