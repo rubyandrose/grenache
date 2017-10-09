@@ -3,6 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :trackable, :omniauthable, omniauth_providers: [:google_oauth2]
 
+  has_many :posts
+
   def self.from_omniauth(auth)
     find_or_create_by(email: auth.info.email).tap do |user|
       user.full_name = auth.info.name
