@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   root to: "hello#index"
 
   resources :posts
+  resources :users, only: [:show]
 end
