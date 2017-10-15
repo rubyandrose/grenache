@@ -5,15 +5,13 @@ class User < ApplicationRecord
 
   has_many :posts
 
+  validates :picture_url, format: { with: /.*\.(jpg|png)/i, message: 'must end in an image format' }
+
   def self.from_omniauth(auth)
     find_or_create_by(email: auth.info.email).tap do |user|
       user.full_name = auth.info.name
       user.picture_url = auth.info.image
       user.save
     end
-  end
-
-  def picture_url
-    read_attribute(:picture_url) || avatar.url
   end
 end
