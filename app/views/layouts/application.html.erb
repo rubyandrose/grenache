@@ -18,7 +18,7 @@
 </marquee>
 </nav>
 
-<img src="http://www.pitt.edu/~egs21/infomanycute.jpg" alt="Our Logo!" width="80" height="80">
+<img id="dogs-photo" src="http://www.pitt.edu/~egs21/infomanycute.jpg" alt="Our Logo!" width="80" height="80">
 
   <%= link_to_unless_current image_tag("/assets/new_logo.jpg", width: 80, height: 80, alt: "Welcome"), root_path %>
 
@@ -31,7 +31,9 @@
 </div>
 
 
-<%= yield %>
+<div class="centered">
+  <%= yield %>
+</div>
 
 </body>
 </html>
