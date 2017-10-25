@@ -2,13 +2,18 @@
 
 body {
   font-family: 'Open Sans Condensed', sans-serif;
-  background-color: #ddd;
+  background-color: #d88f9a;
 }
 .sign_out {
   float: right
 }
 
 img.avatar {
-  width: 10%; 
+  width: 10%;
   height: 25%;
+}
+
+img.aboutimage {
+  float: left;
+  padding-right: 20px;
 }
