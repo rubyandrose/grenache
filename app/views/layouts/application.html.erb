@@ -20,10 +20,15 @@
 
 <img src="http://www.pitt.edu/~egs21/infomanycute.jpg" alt="Our Logo!" width="80" height="80">
 
-<% if signed_in? %>
-  <%= link_to "Sign out", destroy_user_session_path, class: "sign_out" %>
-<% end %>
+  <%= link_to_unless_current image_tag("/assets/new_logo.jpg", width: 80, height: 80, alt: "Welcome"), root_path %>
 
+<div class="navigation">
+  <%= link_to_unless_current "home", root_path %>
+  <%= link_to_unless_current "about me", about_path %>
+<% if signed_in? %>
+  <%= link_to "Sign out", destroy_user_session_path %>
+<% end %>
+</div>
 
 
 <%= yield %>
