@@ -10,7 +10,15 @@
 </head>
 <body>
 
-<img src="/assets/new_logo.jpg" alt="Our Logo!" width="80" height="80">
+<nav>
+  <marquee>
+    <a href="/posts">Posts
+  </a>
+  <a href="/posts/new">New Post</a>
+</marquee>
+</nav>
+
+<img src="http://www.pitt.edu/~egs21/infomanycute.jpg" alt="Our Logo!" width="80" height="80">
 
 <% if signed_in? %>
   <%= link_to "Sign out", destroy_user_session_path, class: "sign_out" %>
@@ -19,7 +27,6 @@
 
 
 <%= yield %>
-More test texts
 
 </body>
 </html>

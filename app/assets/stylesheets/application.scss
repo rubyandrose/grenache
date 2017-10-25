@@ -1,14 +1,27 @@
-@import url(//fonts.googleapis.com/css?family=Gloria+Hallelujah);
+@import url(//fonts.googleapis.com/css?family=Lora);
 
 body {
-  font-family: 'Open Sans Condensed', sans-serif;
-  background-color: #ddd;
+  font-family: 'Lora', serif;
+  background-color: white;
 }
 .sign_out {
   float: right
 }
 
 img.avatar {
-  width: 10%; 
-  height: 25%;
+  height: 100px;
+}
+
+nav a {
+  padding: 20px;
+}
+
+nav a:visited, nav a {
+  color: white;
+
+}
+
+nav {
+  background-color: black;
+  margin-bottom: 25px;
 }
