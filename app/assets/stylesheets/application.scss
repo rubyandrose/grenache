@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Lora', serif;
-  background-color: white;
+  background-color: #d88f9a;
 }
 .sign_out {
   float: right
@@ -24,4 +24,9 @@ nav a:visited, nav a {
 nav {
   background-color: black;
   margin-bottom: 25px;
+}
+
+img.aboutimage {
+  float: left;
+  padding-right: 20px;
 }
