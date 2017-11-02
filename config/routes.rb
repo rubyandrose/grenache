@@ -10,5 +10,6 @@ Rails.application.routes.draw do
 
   resources :posts
   resources :users, only: [:show]
+  resource :drink_count, only: [:update]
   resource :about
 end

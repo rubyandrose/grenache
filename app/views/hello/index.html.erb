@@ -8,3 +8,8 @@
   </div>
   </marquee>
 </marquee>
+
+<%= current_user.drink_count || 0%> drinks
+<%=form_tag('/drink_count', method: 'put') do %>
+  <button type="submit">I had a drink.</button>
+<% end %>
